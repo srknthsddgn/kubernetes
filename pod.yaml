@@ -6,7 +6,7 @@ metadata:
     name: myapp
 spec:
   containers:
-  - name: nginxContainer 
+  - name: nginxcontainer 
     image: nginx:latest
     resources:
       limits:
