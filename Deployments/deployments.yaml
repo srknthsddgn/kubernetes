@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mydeployment
   labels:
-    name:  my-name
+    name:  mydeployment
 spec:
   replicas: 5
   selector:
@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - image:  nginx:latest
-        name:  my-name
+        name:  nginxcontainer
         resources:
           requests:
             cpu: "20m"
@@ -31,4 +31,3 @@ spec:
             memory: "500Mi"
         ports:
         - containerPort:  5000
-          name:  my-name
