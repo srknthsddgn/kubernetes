@@ -19,6 +19,10 @@ spec:
       labels:
         name: nginx
     spec:
+      tolerations:
+        - key: "node-role.kubernetes.io/control-plane"
+          operator: "Exists"
+          effect: "NoSchedule"
       containers:
       - image:  nginx:latest
         name:  nginxcontainer
@@ -31,7 +35,4 @@ spec:
             memory: "500Mi"
         ports:
         - containerPort:  5000
-  tolerations:
-    - key: "node-role.kubernetes.io/control-plane"
-      operator: "Exists"
-      effect: "NoSchedule"
+
