@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: my-replicaset
+  name: myreplicaset
 spec:
   replicas: 3
   selector:
     matchLabels:
-    app: nginx
+      app: nginx
   template:
     metadata:
       name: proxy
